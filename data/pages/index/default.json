@@ -1,0 +1,13 @@
+{
+  "collection_name": "hawaiicarrental.com",
+  "content_body": "Hello world",
+  "description": "",
+  "intro": "By far, the best deal on a car",
+  "meta": {
+    "status": "published"
+  },
+  "name": "Home",
+  "template": "index.html",
+  "theme": "theme-petpros-maui",
+  "title": "PetPros Maui - Professional Pet Services in Hawaii"
+}

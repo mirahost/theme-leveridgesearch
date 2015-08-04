@@ -1,0 +1,42 @@
+{
+  "home" : {
+    "path": "/",
+    "method": "GET",
+    "controller": "index"
+  },
+  "about" : {
+    "path": "/about/",
+    "method": "GET",
+    "controller": "about"
+  },
+  "faqs" : {
+    "path": "/faqs/",
+    "method": "GET",
+    "controller": "faqs"
+  },
+  "policies" : {
+    "path": "/policies/",
+    "method": "GET",
+    "controller": "policies"
+  },
+  "terms" : {
+    "path": "/terms/",
+    "method": "GET",
+    "controller": "terms"
+  },
+  "contact" : {
+    "path": "/contact/",
+    "method": "GET",
+    "controller": "contact"
+  },
+  "services" : {
+    "path": "/services/",
+    "method": "GET",
+    "controller": "services"
+  },
+  "agreement" : {
+    "path": "/agreement/",
+    "method": "GET",
+    "controller": "agreement"
+  }
+}
