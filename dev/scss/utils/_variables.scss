@@ -8,3 +8,13 @@ $sidebar-width: 14.40%;
 $body-bg: #e6e6e6;
 
 $primary-color: #354b71;
+
+$box-inner-gap: 12px;
+
+// According to bootstrap breakpoints
+$breakpoints : (
+    extra_small : 768px,
+    tablets : 768px,
+    medium : 992px,
+    large : 1200px
+);

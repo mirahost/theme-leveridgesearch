@@ -1,7 +1,46 @@
 @import 'mixin_general.scss';
 
+%pageBox {
+    background: #324253;
+    padding: 12px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    span {
+        border-width: 1px 0 0;
+        border-style: solid;
+        border-color: #fff;
+        margin-left: -#{$box-inner-gap};
+        padding-left: $box-inner-gap;
+        padding-top: $box-inner-gap;
+        display: inline-block;
+    }
+}
+
 @mixin list-reset {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+@mixin respond-to( $breakpoint ) {
+    $value: map-get($breakpoints, $breakpoint);
+    $next_value: null;
+
+    @if $breakpoint == extra_small {
+        @media only screen and (max-width: $value - 1) { @content; }
+    }
+    @else if $breakpoint == tablets {
+        $next_value: map-get($breakpoints, medium);
+        @media only screen and (max-width: $value) { @content; }
+    }
+    @else if $breakpoint == medium {
+        @media only screen and (max-width: $value) { @content; }
+    }
+    @else if $breakpoint == large {
+        @media only screen and (min-width: $value) { @content; }
+    }
 }

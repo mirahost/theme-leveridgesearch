@@ -1,6 +1,10 @@
 #theZone {
     width: $content-width;
     float: left;
+
+    @include respond-to( medium ) {
+        width: 100%;
+    }
 }
 
 #content {
@@ -9,7 +13,6 @@
     img {
         width: 100%;
         height: auto;
-        display: inline-block;
     }
 }
 
@@ -76,11 +79,26 @@
         width: 100%;
     }
 
+    @include respond-to( medium ) {
+        position: relative;
+        + * {
+            position: relative;
+        }
+    }
+
 }
 
 [class*="col-"] {
     position: relative;
     overflow: hidden;
+
+    @include respond-to( medium ) {
+        margin-bottom: 1px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 [class*="col-"] > * {

@@ -25,6 +25,11 @@ body {
     background: $body-bg;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*
  * Row with equal height columns
  * --------------------------------------------------
@@ -38,7 +43,13 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
+
+  // Force moving boxes to next line where it s needed
+  @include respond-to( medium ) {
+      display: block;
+  }
 }
+
 
 #wrapper {
     margin: 60px auto;
@@ -48,4 +59,8 @@ body {
     padding: $wrap-padding;
     overflow: hidden;
     @include box-shadow( 0, 0, 25px );
+
+    @include respond-to( tablets ) {
+      margin: 10px auto;
+    }
 }

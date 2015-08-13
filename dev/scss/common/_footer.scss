@@ -1,0 +1,41 @@
+#pageFooter {
+    overflow: hidden;
+
+    .pagesNav {
+        float: left;
+    }
+}
+
+
+.copyright {
+    @extend %pageBox;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    text-align: right;
+    padding-top: 71px;
+    padding-bottom: 15px;
+
+    span {
+      margin-right: -#{$box-inner-gap};
+      padding-right: $box-inner-gap;
+      margin-left: 0;
+      padding-left: 0;
+      padding-bottom: 5px;
+      border-width: 0 0 1px;
+    }
+
+    > * {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    @include respond-to( medium ) {
+        position: relative;
+    }
+
+}
