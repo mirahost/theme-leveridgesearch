@@ -8,11 +8,16 @@
 }
 
 #content {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     img {
         width: 100%;
         height: auto;
+    }
+
+    .prodBox {
+        @extend .box_effect_1;
+        @include text-shadow( 1px, 1px, 3px );
     }
 }
 
@@ -73,7 +78,9 @@
     }
 
     + * {
-        position: absolute;
+        // Overwrite css from effects
+        position: absolute !important;
+        height: auto !important;
         bottom: 0;
         left: 0;
         width: 100%;

@@ -43,6 +43,13 @@
 
     li {
         @extend %pageBox;
+        @include transition;
+
+        &:hover {
+            @include transform( scale(0.97) );
+            @include box-shadow( 0, 0, 3px, rgba( 0, 0, 0, 0.9 ) );
+            @include opacity( 0.8 );
+        }
     }
 
     a {
