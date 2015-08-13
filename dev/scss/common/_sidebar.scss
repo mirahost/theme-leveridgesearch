@@ -1,6 +1,22 @@
 #sidebar {
     width: $sidebar-width;
     float: right;
+
+    > * {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .partners {
+        text-align: center;
+        @include list-reset;
+
+        li {
+            margin-bottom: 25px;
+        }
+    }
 }
 
 .pagesNav {

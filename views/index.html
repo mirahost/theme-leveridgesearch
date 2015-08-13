@@ -33,6 +33,32 @@
                 </header>
 
                 <section id="content">
+
+                    <div class="row row-eq-height">
+                        <div class="col-md-124">
+                            <a href="#"><img src="{{assets_img}}astonmartin.jpg" alt=""></a>
+                        </div>
+                        <div class="col-md-76">
+                            <form action="#" method="POST" id="request">
+                                <fieldset>
+                                    <label for="description">What are you looking for?</label>
+                                    <textarea name="description" id="description"></textarea>
+
+                                    <label for="email">Email</label>
+                                    <input type="email" placeholder="your@emailaddress.com" name="email" id="email">
+
+                                    <input name="send" id="send" value="Send" type="submit">
+                                </fieldset>
+
+                                <div class="formMeta">
+                                    <small>Results will be sent to you, anonymously, in 48 hours.</small>
+                                </div>
+                            </form>
+
+                            <a href="#"><img src="{{assets_img}}luxurycar.jpg" alt=""></a>
+                        </div>
+                    </div>
+
                     <div class="row row-eq-height">
                         <div class="col-md-76">
                             <a href="#"><img src="{{assets_img}}plane.jpg" alt=""></a>
@@ -58,6 +84,12 @@
                 <nav class="pagesNav">
                     {% include 'common/pages.html' %}
                 </nav>
+
+
+                <ul class="partners">
+                    <li><a href="#"><img src="{{assets_img}}partner_makeawish.png" alt=""></a></li>
+                    <li><a href="#"><img src="{{assets_img}}partner_nspcc.png" alt=""></a></li>
+                </ul>
             </aside>
 
         </div>
@@ -66,7 +98,7 @@
 
     <script type="text/javascript">
       WebFontConfig = {
-        google: { families: [ 'Roboto::latin', 'Merriweather::latin' ] }
+        google: { families: [ 'Roboto::latin', 'Merriweather::latin', 'Lato:400,300italic:latin' ] }
       };
       (function() {
         var wf = document.createElement('script');
