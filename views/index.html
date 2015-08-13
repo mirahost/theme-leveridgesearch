@@ -10,12 +10,73 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="{{assets_css}}main.css">
 
     </head>
     <body>
 
+        <div id="wrapper">
 
+            <div class="container" id="theZone">
+                <header id="pageHeader">
+                    <a href="/" id="identity">
+                        <img src="{{assets_img}}logo.png" alt="">
+                    </a>
+                    <ul class="motto">
+                        <li>Independent</li>
+                        <li>High Value Assets</li>
+                        <li>Global Search</li>
+                        <li>Anonymous Results</li>
+                        <li>48 Hours</li>
+                        <li>No Fees</li>
+                    </ul>
+                </header>
+
+                <section id="content">
+                    <div class="row row-eq-height">
+                        <div class="col-md-76">
+                            <a href="#"><img src="{{assets_img}}plane.jpg" alt=""></a>
+                            <a href="#"><img src="{{assets_img}}yacht.jpg" alt=""></a>
+                        </div>
+                        <div class="col-md-124">
+                            <a href="#"><img src="{{assets_img}}boat.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </section><!--/#content-->
+
+
+                <footer id="pageFooter">
+                    <nav class="pagesNav">
+                        {% include 'common/pages.html' %}
+                    </nav>
+                </footer>
+
+            </div><!--/#theZone-->
+
+
+            <aside id="sidebar">
+                <nav class="pagesNav">
+                    {% include 'common/pages.html' %}
+                </nav>
+            </aside>
+
+        </div>
 
     </body>
+
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Roboto::latin', 'Merriweather::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+
 </html>

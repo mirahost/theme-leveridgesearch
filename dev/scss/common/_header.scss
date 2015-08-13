@@ -1,0 +1,40 @@
+#pageHeader {
+    background: $primary-color;
+    text-align: center;
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 15px;
+
+    .motto {
+        $bullet-margin: 6px;
+        @include list-reset;
+
+        text-align: center;
+        color: rgba( 255, 255, 255, 0.4 );
+
+        li {
+            display: inline-block;
+            margin-left: $bullet-margin;
+            &:before {
+                font-size: 30px;
+                display: inline-block;
+                vertical-align: middle;
+                content: '\000B7';
+                margin-right: $bullet-margin;
+            }
+
+            &:first-child:before {
+                display: none;
+            }
+        }
+    }
+
+}
+
+#identity {
+    display: block;
+    margin-bottom: 20px;
+}
+

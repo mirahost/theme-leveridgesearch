@@ -1,0 +1,52 @@
+// Normalize
+@import '../bootstrap/css/bootstrap';
+@import '../bootstrap/css/bootstrap-theme';
+
+//Utils
+@import 'utils/variables.scss';
+@import 'utils/mixin.scss';
+
+// Common
+@import 'common/header.scss';
+@import 'common/footer.scss';
+@import 'common/content.scss';
+@import 'common/sidebar.scss';
+
+//Pages
+@import 'pages/home.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    background: $body-bg;
+}
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+#wrapper {
+    margin: 60px auto;
+    background: $wrap-background;
+    width: $wrap-width;
+    padding: $wrap-padding;
+    overflow: hidden;
+    @include box-shadow( 0, 0, 25px );
+}

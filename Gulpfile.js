@@ -5,7 +5,7 @@ var livereload = require('gulp-livereload');
 
 var path = {
     scss : {
-        src : 'dev/scss/*.scss',
+        src : 'dev/scss/**/*.scss',
         dest : 'assets/css'
     }
 };
@@ -13,7 +13,7 @@ var path = {
 gulp.task('sass', function(){
     return gulp.src( path.scss.src )
                 .pipe( sourcemaps.init() )
-                .pipe( sass() )
+                .pipe( sass().on('error', sass.logError) )
                 .pipe( sourcemaps.write() )
                 .pipe( gulp.dest(path.scss.dest) )
 

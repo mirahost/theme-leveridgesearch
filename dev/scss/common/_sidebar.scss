@@ -1,0 +1,65 @@
+#sidebar {
+    width: $sidebar-width;
+    float: right;
+}
+
+.pagesNav {
+    $items-gap : 5px;
+    $inner-gap: 12px;
+
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+
+
+    ul {
+        @include list-reset;
+    }
+
+    li {
+        padding: $inner-gap;
+        background: #324253;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        padding-top: 95px;
+        display: block;
+    }
+
+    span {
+        border-top: 1px solid #fff;
+        margin-left: -#{$inner-gap};
+        padding-left: $inner-gap;
+        padding-top: $inner-gap;
+        display: block;
+    }
+
+    #sidebar & {
+
+        li {
+            margin-top: $items-gap;
+            width: 100%;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    #pageFooter & {
+        li {
+            margin-left: $items-gap;
+            float: left;
+            width: 150px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+    }
+
+}

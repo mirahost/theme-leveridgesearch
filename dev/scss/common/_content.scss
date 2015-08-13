@@ -1,0 +1,14 @@
+#theZone {
+    width: $content-width;
+    float: left;
+}
+
+
+[class*="col-"] > a {
+    display: block;
+    margin-bottom: 1px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
