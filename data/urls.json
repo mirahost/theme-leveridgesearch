@@ -4,39 +4,24 @@
     "method": "GET",
     "controller": "index"
   },
-  "about" : {
-    "path": "/about/",
+  "company" : {
+    "path": "/company/",
     "method": "GET",
-    "controller": "about"
-  },
-  "faqs" : {
-    "path": "/faqs/",
-    "method": "GET",
-    "controller": "faqs"
-  },
-  "policies" : {
-    "path": "/policies/",
-    "method": "GET",
-    "controller": "policies"
-  },
-  "terms" : {
-    "path": "/terms/",
-    "method": "GET",
-    "controller": "terms"
-  },
-  "contact" : {
-    "path": "/contact/",
-    "method": "GET",
-    "controller": "contact"
+    "controller": "company"
   },
   "services" : {
     "path": "/services/",
     "method": "GET",
     "controller": "services"
   },
-  "agreement" : {
-    "path": "/agreement/",
+  "what" : {
+    "path": "/what/",
     "method": "GET",
-    "controller": "agreement"
+    "controller": "what"
+  },
+  "where" : {
+    "path": "/where/",
+    "method": "GET",
+    "controller": "where"
   }
 }
