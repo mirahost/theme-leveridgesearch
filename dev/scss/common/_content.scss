@@ -16,9 +16,64 @@
     }
 
     .prodBox {
-        @extend .box_effect_1;
-        @include text-shadow( 1px, 1px, 3px );
+        color: #fff;
+
+        h1 {
+            margin-left: -#{$prod-inner-gap};
+            padding-left: $prod-inner-gap;
+            border-bottom: 1px solid #fff;
+            display: inline-block;
+        }
+
+        .textBox {
+            margin-right: -#{$prod-inner-gap};
+            padding-right: $prod-inner-gap;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 20px;
+        }
+
+        .first-word {
+            float: left;
+            margin-right: 10px;
+            font-family: 'Merriweather', serif;
+            font-size: 72px;
+            line-height: 1;
+        }
+
+        .headings {
+            position: absolute;
+            bottom: $prod-inner-gap;
+            left: $prod-inner-gap;
+            text-align: left;
+
+            > * {
+                margin: 0;
+            }
+
+            + a {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &.effect {
+            @extend .box_effect_1;
+            @include text-shadow( 1px, 1px, 3px );
+        }
     }
+
+    .overlay {
+        padding: $prod-inner-gap;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+
 }
 
 #request {

@@ -7,7 +7,7 @@
     "status": "published"
   },
   "name": "Home",
-  "template": "index.html",
+  "template": "company.html",
   "theme": "theme-leveridgesearch",
   "title": "PetPros Maui - Professional Pet Services in Hawaii"
 }
