@@ -23,5 +23,10 @@
     "path": "/where/",
     "method": "GET",
     "controller": "where"
+  },
+  "articles" : {
+    "path": "/articles/",
+    "method": "GET",
+    "controller": "articles"
   }
 }
