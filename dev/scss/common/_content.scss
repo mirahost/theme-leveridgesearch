@@ -23,6 +23,7 @@
             padding-left: $prod-inner-gap;
             border-bottom: 1px solid #fff;
             display: inline-block;
+            padding-bottom: 15px;
         }
 
         .textBox {
@@ -30,6 +31,10 @@
             padding-right: $prod-inner-gap;
             border-bottom: 1px solid #fff;
             padding-bottom: 20px;
+            overflow: hidden;
+            p:last-child {
+                margin-bottom: 0;
+            }
         }
 
         .first-word {
@@ -38,6 +43,11 @@
             font-family: 'Merriweather', serif;
             font-size: 72px;
             line-height: 1;
+            &.single-line {
+                float: none;
+                display: inline-block;
+                vertical-align: baseline;
+            }
         }
 
         .headings {

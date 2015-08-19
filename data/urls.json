@@ -1,8 +1,13 @@
 {
-  "home" : {
+  "index" : {
     "path": "/",
     "method": "GET",
     "controller": "index"
+  },
+  "home" : {
+    "path": "/home/",
+    "method": "GET",
+    "controller": "home"
   },
   "company" : {
     "path": "/company/",

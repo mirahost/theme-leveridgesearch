@@ -28,7 +28,7 @@ gulp.task('js', function(){
     gulp.src( path.js.src )
         .pipe( sourcemaps.init() )
         .pipe( concat('leveridge.js') )
-        .pipe( uglify() )
+        .pipe( uglify() ).on('error', function(){ console.log('uglify error'); })
         .pipe( gulp.dest( path.js.dest ) );
 });
 
