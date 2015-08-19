@@ -184,4 +184,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    .small-images & {
+        &:last-child {
+            margin-bottom: 2px;
+        }
+    }
 }
