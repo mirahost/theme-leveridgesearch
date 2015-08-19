@@ -52,12 +52,23 @@
 
         .headings {
             position: absolute;
-            bottom: $prod-inner-gap;
-            left: $prod-inner-gap;
+            bottom: 10%;
+            left: 10%;
             text-align: left;
 
             > * {
                 margin: 0;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 85px;
+                margin-bottom: 15px;
+            }
+
+            h4 {
+                font-size: 48px;
             }
 
             + a {
@@ -71,7 +82,29 @@
         &.effect {
             @extend .box_effect_1;
             @include text-shadow( 1px, 1px, 3px );
+            font-family: 'Roboto', sans-serif;
         }
+    }
+
+    .smallest-col .headings {
+        h2 {
+            font-size: 40px;
+        }
+        h4 {
+            font-size: 25px;
+        }
+    }
+
+    .small-images .headings {
+        h2 {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        h4 {
+            font-size: 12px;
+        }
+
     }
 
     .overlay {
@@ -90,11 +123,6 @@
     background: $primary-color;
     padding: 15px;
     color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 63.8%;
 
     input,
     textarea {
@@ -112,6 +140,18 @@
     #send {
         width: 25%;
         float: right;
+    }
+
+    ul {
+        @include list-reset;
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     textarea {
@@ -132,6 +172,7 @@
         font-style: italic;
         display: block;
         font-size: 25px;
+        margin-bottom: 10px;
     }
 
     .formMeta {
@@ -142,21 +183,6 @@
         margin-top: 15px;
     }
 
-    + * {
-        // Overwrite css from effects
-        position: absolute !important;
-        height: auto !important;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
-
-    @include respond-to( medium ) {
-        position: relative;
-        + * {
-            position: relative;
-        }
-    }
 
 }
 
@@ -186,8 +212,13 @@
     }
 
     .small-images & {
+        margin-bottom: 2px;
+
+
         &:last-child {
-            margin-bottom: 2px;
+            margin-bottom: 0;
         }
+
     }
+
 }

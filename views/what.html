@@ -15,32 +15,67 @@
                             </div>
                         </div>
                         <div class="col-md-76 col-sm-200">
+
                             <form action="#" method="POST" id="request">
-                                <fieldset>
-                                    <label for="description">What are you looking for?</label>
-                                    <textarea name="description" id="description"></textarea>
+                                <ul>
+                                    <li>
+                                        <label for="description">What are you looking for?</label>
+                                        <textarea name="description" id="description"></textarea>
+                                    </li>
+                                    <li>
+                                        <label for="email">Email</label>
+                                        <input type="email" placeholder="your@emailaddress.com" name="email" id="email">
 
-                                    <label for="email">Email</label>
-                                    <input type="email" placeholder="your@emailaddress.com" name="email" id="email">
-
-                                    <input name="send" id="send" value="Send" type="submit">
-                                </fieldset>
+                                        <input name="send" id="send" value="Send" type="submit">
+                                    </li>
+                                </ul>
 
                                 <div class="formMeta">
                                     <small>Results will be sent to you, anonymously, in 48 hours.</small>
                                 </div>
                             </form>
 
-                            <div class="prodBox effect">
-                                <img src="{{assets_img}}luxurycar.jpg" alt="">
-                                <div class="overlay">
-                                    <div class="headings">
-                                        <h2>Heading</h2>
-                                        <h4>Subheading</h4>
+                            <!-- Small images-->
+                            <div class="row small-images">
+
+                                <div class="col-md-78">
+                                    <div class="prodBox effect">
+                                        <img src="{{assets_img}}house.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="headings">
+                                                <h2>Heading</h2>
+                                                <h4>Subheading</h4>
+                                            </div>
+                                            <a href="#"></a>
+                                        </div>
                                     </div>
-                                    <a href="#"></a>
+                                    <div class="prodBox effect">
+                                        <img src="{{assets_img}}bmw_widescreen.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="headings">
+                                                <h2>Heading</h2>
+                                                <h4>Subheading</h4>
+                                            </div>
+                                            <a href="#"></a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="col-md-122">
+                                    <div class="prodBox effect">
+                                        <img src="{{assets_img}}ferrari_inside.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="headings">
+                                                <h2>Heading</h2>
+                                                <h4>Subheading</h4>
+                                            </div>
+                                            <a href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--/.small-images-->
+
                         </div>
                     </div>
 
@@ -84,9 +119,6 @@
                                             <a href="#"></a>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-md-78">
                                     <div class="prodBox effect">
                                         <img src="{{assets_img}}table.jpg" alt="">
                                         <div class="overlay">
@@ -97,7 +129,9 @@
                                             <a href="#"></a>
                                         </div>
                                     </div>
+
                                 </div>
+
 
                             </div><!--/.small-images-->
                         </div>

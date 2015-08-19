@@ -1,6 +1,7 @@
 (function($){
 
     var $wrapper = $('#content');
+    var $navigation = $('.pagesNav');
 
     // Navigation
     $(window).on('hashchange', function(e){
@@ -22,9 +23,10 @@
                     })
                 });
 
+                // Updates current page class
+                currentPage( $navigation, target );
             }
         });
-
 
     }).trigger('hashchange');
 
@@ -47,8 +49,15 @@
                 class : 'first-word' + extraClass,
                 text : fword
             }).prependTo( $p );
-
         });
+
+        // Column calculation
+        // Adds class to smallest column from each row
+        $('#content > .row').each(function(){
+            var $this = $(this);
+            smallestCol( $this );
+        })
+
     });
 
 })(jQuery);
