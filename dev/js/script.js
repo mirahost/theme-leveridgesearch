@@ -56,6 +56,21 @@
         $('#content > .row').each(function(){
             var $this = $(this);
             smallestCol( $this );
+        });
+
+
+        // Form validator
+        $('#request', $pageContent).validate({
+            rules : {
+                description : {
+                    required : true,
+                    minlength : 5
+                },
+                email : {
+                    required : true,
+                    email : true
+                }
+            }
         })
 
     });
