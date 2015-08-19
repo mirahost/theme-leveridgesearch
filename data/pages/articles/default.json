@@ -1,13 +1,12 @@
 {
-  "collection_name": "hawaiicarrental.com",
-  "content_body": "Hello world",
+  "content_body": "High Value Asset Search",
   "description": "",
-  "intro": "By far, the best deal on a car",
+  "intro": "High Value Asset Search",
   "meta": {
     "status": "published"
   },
   "name": "Home",
-  "template": "services.html",
+  "template": "index.html",
   "theme": "theme-leveridgesearch",
   "title": "Leveridge Search - High Value Asset Search"
 }
