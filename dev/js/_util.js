@@ -36,7 +36,6 @@ function currentPage( $nav, hash ) {
     $('li', $nav).each(function(){
         var $this = $(this);
         var target = $('a', $this).attr('href');
-        console.log(prepareHash( target, 'empty' ), prepareHash( hash, 'empty' ));
         if( prepareHash( target, 'empty' ) === prepareHash( hash, 'empty' ) ){
             $this.addClass(activeClass).siblings().removeClass(activeClass);
         }

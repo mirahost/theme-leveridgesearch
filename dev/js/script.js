@@ -12,8 +12,10 @@
         var target = window.location.hash;
 
         // Check current hash
-        if( hashes.indexOf( prepareHash(target, 'empty') ) === -1 ) {
-            return;
+        if( ( hashes.indexOf( prepareHash(target, 'empty') ) == -1 && target.length ) ||
+            ( window.location.pathname.length <= 1 && !target.length ) ) {
+
+            target = '#home/';
         }
 
         $.ajax({
