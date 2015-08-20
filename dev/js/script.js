@@ -3,6 +3,7 @@
     var $wrapper = $('#content');
     var $navigation = $('.pagesNav');
     var $boxUpdate = $('#boxUpdate')
+    var firstLoad = true;
 
     // available hashes to be sure that the page won't be changed random
     var hashes = [ "home", "company", "services", "where", "what" ];
@@ -14,7 +15,6 @@
         // Check current hash
         if( ( hashes.indexOf( prepareHash(target, 'empty') ) == -1 && target.length ) ||
             ( window.location.pathname.length <= 1 && !target.length ) ) {
-
             target = '#home/';
         }
 
@@ -39,9 +39,14 @@
 
         // Updates current page class
         currentPage( $navigation, target );
-        $('html, body').animate({
-            'scrollTop' : $boxUpdate.position().top
-        });
+
+        if( !firstLoad ) {
+            $('html, body').animate({
+                'scrollTop' : $boxUpdate.position().top
+            });
+        }
+
+        firstLoad = false;
 
         // First letter
         $('.textBox', $pageContent).each(function(){
