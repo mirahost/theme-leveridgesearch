@@ -20,7 +20,7 @@ function smallestCol( $wrapper ) {
     });
 
     minPos = sizes.indexOf( sizes.min() );
-    console.log(minPos);
+
     $children.eq(minPos).addClass('smallest-col');
 
 }
@@ -34,7 +34,7 @@ function currentPage( $nav, hash ) {
         if( target === hash ){
             $this.addClass(activeClass).siblings().removeClass(activeClass);
         }
-    })
+    });
 }
 
 Array.prototype.min = function() {

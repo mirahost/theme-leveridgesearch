@@ -2,6 +2,7 @@
 
     var $wrapper = $('#content');
     var $navigation = $('.pagesNav');
+    var $boxUpdate = $('#boxUpdate')
 
     // Navigation
     $(window).on('hashchange', function(e){
@@ -16,21 +17,26 @@
             method : 'GET',
             dataType : 'html',
             success : function( data ){
-                var data = $.parseHTML(data)
-                $wrapper.fadeOut('slow', function(){
-                    $(this).empty().append( data ).fadeIn(function(){
-                        $(window).trigger('pageChanged', [data]);
-                    })
-                });
+                var data = $.parseHTML(data);
 
-                // Updates current page class
-                currentPage( $navigation, target );
+                $boxUpdate.fadeOut(function(){
+                    $(this).empty().append( data ).fadeIn(function(){
+                        $(window).trigger('pageChanged', [data, target]);
+                    });
+                });
             }
         });
 
     }).trigger('hashchange');
 
-    $(window).on('pageChanged', function(e, $pageContent){
+    $(window).on('pageChanged', function(e, $pageContent, target){
+
+        // Updates current page class
+        currentPage( $navigation, target );
+        $('html, body').animate({
+            'scrollTop' : $boxUpdate.position().top
+        });
+
         // First letter
         $('.textBox', $pageContent).each(function(){
             var $this = $(this);
@@ -38,7 +44,6 @@
             // Take the first letter
             var fword = $p.html().slice(0,1);
             var extraClass = getLinesNumber($p) === 1 ? ' single-line' : '';
-
 
             // Remove first letter and re-write the new text
             var newText = $p.html().substring( 1, $p.html().length - 1 );
