@@ -16,17 +16,30 @@
 
         li {
             display: inline-block;
+            vertical-align: middle;
             margin-left: $bullet-margin;
             &:before {
-                font-size: 30px;
+                font-size: 26px;
                 display: inline-block;
-                vertical-align: middle;
+                vertical-align: top;
                 content: '\000B7';
-                margin-right: $bullet-margin;
+                margin: 2px  $bullet-margin 0 0;
             }
 
             &:first-child:before {
                 display: none;
+            }
+
+            &:hover a {
+            }
+        }
+        a {
+            @include transition;
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            &:hover {
+                @include transform( scale(0.9) );
             }
         }
     }
