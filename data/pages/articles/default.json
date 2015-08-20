@@ -6,7 +6,7 @@
     "status": "published"
   },
   "name": "Home",
-  "template": "index.html",
+  "template": "articles.html",
   "theme": "theme-leveridgesearch",
   "title": "Leveridge Search - High Value Asset Search"
 }

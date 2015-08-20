@@ -1,7 +1,7 @@
 @import 'mixin_general.scss';
 
 %pageBox {
-    background: #324253;
+    background: $primary-color;
     padding: 12px;
 
     a {

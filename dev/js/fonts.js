@@ -1,6 +1,6 @@
 (function() {
   WebFontConfig = {
-    google: { families: [ 'Roboto::latin', 'Merriweather::latin', 'Lato:400,300italic:latin' ] }
+    google: { families: [ 'Roboto:300, 400:latin', 'Merriweather::latin', 'Lato:400,300italic:latin' ] }
   };
 
   var wf = document.createElement('script');

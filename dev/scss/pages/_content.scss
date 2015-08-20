@@ -1,0 +1,47 @@
+.row.pageHeader {
+    font-family: 'Roboto', sans-serif;
+    margin: 50px 0;
+
+    h1, h3 {
+        font-weight: 300;
+        line-height: 1;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+}
+
+.innerNav {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+    ul {
+        @include list-reset;
+    }
+
+    li {
+        border-bottom: 1px solid $secondary-color;
+        line-height: 40px;
+    }
+
+    a {
+        display: block;
+        padding: 0 10px;
+        font-size: 15px;
+        color: #414141;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            background: $secondary-color;
+            color: #fff;
+        }
+    }
+}

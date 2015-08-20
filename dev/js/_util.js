@@ -1,5 +1,10 @@
-function prepareHash( hash ) {
-    return hash.replace('#', '/');
+function prepareHash( hash, type ) {
+    type = type === undefined ? 'replace' : 'empty';
+    if( type === 'replace' ) {
+        return hash.replaceAll('#', '/');
+    } else {
+        return hash.replaceAll('#', '').replaceAll('/', '');
+    }
 }
 
 function getLinesNumber( $wrapper ) {
@@ -31,7 +36,8 @@ function currentPage( $nav, hash ) {
     $('li', $nav).each(function(){
         var $this = $(this);
         var target = $('a', $this).attr('href');
-        if( target === hash ){
+        console.log(prepareHash( target, 'empty' ), prepareHash( hash, 'empty' ));
+        if( prepareHash( target, 'empty' ) === prepareHash( hash, 'empty' ) ){
             $this.addClass(activeClass).siblings().removeClass(activeClass);
         }
     });
@@ -40,3 +46,9 @@ function currentPage( $nav, hash ) {
 Array.prototype.min = function() {
   return Math.min.apply(null, this);
 };
+
+String.prototype.replaceAll = function (find, replace) {
+    var str = this;
+    return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+};
+

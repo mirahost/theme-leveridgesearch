@@ -4,12 +4,16 @@
     var $navigation = $('.pagesNav');
     var $boxUpdate = $('#boxUpdate')
 
+    // available hashes to be sure that the page won't be changed random
+    var hashes = [ "home", "company", "services", "where", "what" ];
+
     // Navigation
     $(window).on('hashchange', function(e){
         var target = window.location.hash;
 
-        if( !target.length ) {
-            target = '#home/';
+        // Check current hash
+        if( hashes.indexOf( prepareHash(target, 'empty') ) === -1 ) {
+            return;
         }
 
         $.ajax({
