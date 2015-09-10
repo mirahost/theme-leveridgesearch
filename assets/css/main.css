@@ -9633,6 +9633,9 @@ fieldset[disabled] .btn-danger.active {
   #content img {
     width: 100%;
     height: auto; }
+    #content p img {
+    width: auto;
+    height: auto; }
   #content .prodBox {
     color: #fff; }
     #content .prodBox h1 {
