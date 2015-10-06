@@ -2,12 +2,12 @@
   "collection_name": "hawaiicarrental.com",
   "content_body": "Hello world",
   "description": "",
-  "intro": "High Value Asset Search",
+  "intro": "By far, the best deal on a car",
   "meta": {
     "status": "published"
   },
   "name": "Home",
-  "template": "index.html",
+  "template": "start.html",
   "theme": "theme-leveridgesearch",
-  "title": "Leveridge Search - High Value Asset Search"
+  "title": "PetPros Maui - Professional Pet Services in Hawaii"
 }
