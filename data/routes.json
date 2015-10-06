@@ -2,36 +2,36 @@
   "index" : {
     "path": "/",
     "method": "GET",
-    "controller": "index"
+    "controller": "content"
   },
-  "home" : {
-    "path": "/home/",
+  "start" : {
+    "path": "/start/",
     "method": "GET",
-    "controller": "home"
+    "controller": "content"
   },
   "company" : {
     "path": "/company/",
     "method": "GET",
-    "controller": "company"
+    "controller": "content"
   },
   "services" : {
     "path": "/services/",
     "method": "GET",
-    "controller": "services"
+    "controller": "content"
   },
   "what" : {
     "path": "/what/",
     "method": "GET",
-    "controller": "what"
+    "controller": "content"
   },
   "where" : {
     "path": "/where/",
     "method": "GET",
-    "controller": "where"
+    "controller": "content"
   },
   "articles" : {
     "path": "/articles/",
     "method": "GET",
-    "controller": "articles"
+    "controller": "content"
   }
 }
