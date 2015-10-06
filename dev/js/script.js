@@ -52,6 +52,10 @@
         $('.textBox', $pageContent).each(function(){
             var $this = $(this);
             var $p = $('p:first', $this);
+
+            if (!$p.length)
+                return;
+
             // Take the first letter
             var fword = $p.html().slice(0,1);
             var extraClass = getLinesNumber($p) === 1 ? ' single-line' : '';
