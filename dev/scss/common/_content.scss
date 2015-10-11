@@ -144,6 +144,21 @@
         float: right;
     }
 
+    .requestResults > *{
+        border-radius: 3px;
+        display: none;
+        text-align: center;
+        color: $primary-color;
+
+        &.success {
+            background-color: #DFF2BF;
+        }
+
+        &.fail {
+            background-color: #FFBABA;
+        }
+    }
+
     ul {
         @include list-reset;
     }
