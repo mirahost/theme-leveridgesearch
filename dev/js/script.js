@@ -77,22 +77,33 @@
             var $this = $(this);
             smallestCol( $this );
         });
-
-
-        // Form validator
-        $('#request', $pageContent).validate({
-            rules : {
-                description : {
-                    required : true,
-                    minlength : 5
-                },
-                email : {
-                    required : true,
-                    email : true
-                }
-            }
-        })
-
     });
+
+
+    // Form validator
+    var $form = $('#request');
+    var $success = $('.success', $form);
+    var $fail = $('.fail', $form);
+
+    $form.validate({
+        submitHandler : function(){
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+            })
+            .success(function() {
+                $form.children(':not(.requestResults)').fadeOut(function(){
+                    $success.fadeIn();
+                })
+            })
+            .fail(function() {
+                $form.children(':not(.requestResults)').fadeOut(function(){
+                    $fail.fadeIn();
+                })
+            });
+
+            return false;
+        }
+    })
 
 })(jQuery);
