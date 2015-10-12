@@ -6,7 +6,7 @@
     var firstLoad = true;
 
     // available hashes to be sure that the page won't be changed random
-    var hashes = [ "home", "company", "services", "where", "what" ];
+    var hashes = [ "start", "company", "services", "where", "what" ];
 
     // Navigation
     $(window).on('hashchange', function(e){
@@ -15,7 +15,7 @@
         // Check current hash
         if( ( hashes.indexOf( prepareHash(target, 'empty') ) == -1 && target.length ) ||
             ( window.location.pathname.length <= 1 && !target.length ) ) {
-            target = '#home/';
+            target = '#start/';
         }
 
         $.ajax({
